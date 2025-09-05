@@ -1,0 +1,26 @@
+server:
+  port: 7005
+spring: 
+  application: 
+   name: GatewayMS
+  cloud: 
+   consul: 
+    discovery: 
+     hostname: localhost
+   gateway: 
+    discovery: 
+     locator: 
+      enabled: true
+    routes: 
+     - id: PolicyMS
+       uri: lb://PolicyMS
+       predicates: 
+        - Path= /policies/**,/policy/**
+     - id: CustomerMs
+       uri: lb://CustomerMS
+       predicates: 
+        - Path= /customer/**
+     - id: PaymentMs
+       uri: lb://PaymentMS
+       predicates: 
+        - Path= /payment/**
