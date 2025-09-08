@@ -7,7 +7,8 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+	</parent>   
+	<!--ii-->
 	<groupId>com.infy.gateway</groupId>
 	<artifactId>GatewayMS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
